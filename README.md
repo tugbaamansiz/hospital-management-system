@@ -1,4 +1,4 @@
-# Hospital Management System (Java)
+# Hospital Management System (Java Data Structures)
 
 This project is a simple hospital management system developed in Java.  
 It demonstrates how different data structures can be used together to manage hospital workflows efficiently.
@@ -7,6 +7,43 @@ It demonstrates how different data structures can be used together to manage hos
 The goal of this project is to simulate a hospital environment where patients are registered, queued for treatment, and discharged while maintaining efficient data access and processing.
 
 ## Data Structures Used
+- ArrayList → patient storage  
+- Queue → treatment order (FIFO)  
+- Stack → discharge records (LIFO)  
+- HashMap → fast patient lookup
+
+
+## System Architecture
+```
+
+
+                +------------------+
+                |   HospitalSystem |
+                +------------------+
+                         |
+         ---------------------------------------
+         |                |                   |
+         |                |                   |
+  +-------------+   +-------------+    +-------------+
+  | PatientList |   | Treatment   |    | Discharge   |
+  | (ArrayList) |   | Queue       |    | Stack       |
+  +-------------+   +-------------+    +-------------+
+         |                |                   |
+         |                |                   |
+   +-------------+   +-------------+    +-------------+
+   |   Patient   |   |TreatmentReq |    |DischargeRec |
+   +-------------+   +-------------+    +-------------+
+
+                 +------------------+
+                 |    HashMap       |
+                 |  (patientMap)    |
+                 +------------------+
+                         |
+                   Fast Patient
+                      Lookup
+```
+
+
 
 ### Patient List
 All registered patients are stored in a PatientList structure.  
@@ -68,6 +105,18 @@ Main classes used in the project:
 - Java
 - Object Oriented Programming
 - Data Structures (Stack, Queue, HashMap, List)
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kullaniciadin/hospital-management-system-java.git
+
+2.Open the project in an IDE such as IntelliJ IDEA, Eclipse or VS Code.
+
+3.Compile the Java files.
+
+4.Run Main.java to start the hospital management system.
 
   ## Project Report
 
