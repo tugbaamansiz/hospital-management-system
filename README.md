@@ -69,6 +69,13 @@ Main classes used in the project:
 - Object Oriented Programming
 - Data Structures (Stack, Queue, HashMap, List)
 
+  ## Project Report
+
+You can read the detailed project report here:
+
+[Hospital System Project Report](docs/hospital-system-report.pdf)
+
+
 ## Author
 
 Tuğba Amansız  
